@@ -76,9 +76,9 @@ export default class Worker {
     await this.writePayload(option, `worker:info:${option.clusterName}`);
   }
 
-  public async updateClusterInfo(clusterName: string, allowAdress?: string[], price?: number) {
+  public async updateClusterInfo(clusterName: string, allowAddress?: string[], price?: number) {
     await this.writePayload({
-      allowAdress,
+      allowAddress,
       price,
     }, `worker:info:${clusterName}`);
   }
